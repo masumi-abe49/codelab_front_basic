@@ -1,0 +1,40 @@
+nav {
+  width: 600px;
+  margin: 50px auto;
+}
+
+ul {
+  display: flex;
+  background: wheat;
+}
+
+li {
+  width: 100px;
+  height: 50px;
+  background: url(/Users/Junpei/desktop/codelab_front_basic/html/sprite/CSS sprite/sprite.png) no-repeat;
+  z-index: 10;
+}
+
+li:hover {
+  transition: .3s;
+}
+
+/* 以下から記述する */
+
+.item a {
+  display: inline-block; /* aタグはインラインブロック要素に */
+  text-decoration: none; /* aタグの下線の装飾を消去 */
+}
+
+.home {
+  background-position: 0px 0px;
+}
+.home:hover {
+  background-position:  0px -50px;
+}
+.item01 a:active {
+  background-position:  0px -80px;
+}
+.item01.current a {
+  background-position:  0px -120px;
+}
