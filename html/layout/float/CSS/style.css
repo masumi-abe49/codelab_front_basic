@@ -1,0 +1,41 @@
+@charset "utf-8";
+body {
+  background: #f0f8ff;
+}
+* {
+  box-sizing: border-box;
+}
+.wrap {
+  max-width: calc(1280/1920*100%);
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 80px;
+  font-size: 20px;
+  text-align: center;
+}
+.header {
+  background: #e6e6fa;
+  padding: 50px 0;
+}
+.main {
+  background: #f0f8ff;
+  height: 600px;
+  line-height: 600px;
+}
+.footer {
+  background: #add8e6;
+  padding: 50px 0;
+  clear: both;
+}
+.left {
+  background: #eceecb;
+  float: left;
+  height: 600px;
+  width: 25%;
+}
+.right {
+  background: #fa8072;
+  float: right;
+  height: 600px;
+  width: 25%;
+}
