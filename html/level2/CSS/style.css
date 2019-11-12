@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1440px;
+  min-width: 1220px;
+  width: 100%;
+}
+
+/* メイン */
+.main {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* サイドメニュー */
+
+.side {
+  width: 30%;
+  text-align: center;
+  background-color: rgb(37, 100, 151);
+}
+
+.side img {
+  margin-top: 100px;
+}
+
+.side p {
+  margin-top: 50px;
+  font-size: 45px;
+  color: white;
+}
+
+.side ul {
+  display: inline-block;
+  margin-top: 120px;
+}
+
+.side ul li {
+  text-align: left;
+  margin-top: 50px;
+}
+
+.side ul li a {
+  text-decoration-line: none;
+  color: white;
+}
+
+.side ul li:last-child a {
+  color: yellow;
+}
+
+/* メインコンテナ */
+
+.main-container {
+  width: 70%;
+}
+
+.main-container .top-image img {
+  width: 100%;
+  height: 672px;
+}
+
+.countainer {
+  width: 88%;
+  margin: 80px 50px 0 75px;
+}
+
+.top-message p {
+  margin-top: 60px;
+  line-height: 2em;
+  color: rgb(172, 172, 172);
+}
+
+h1,
+h2 {
+  color: rgb(37, 100, 151);
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+/* about-wrap */
+
+.about {
+  width: 100%;
+  display: flex;
+}
+
+.about-left img {
+  width: 275px;
+  height: 415px;
+}
+
+.about-right {
+  margin: 5px 0 0 30px;
+}
+
+.about-right p {
+  margin-top: 30px;
+  line-height: 2em;
+  color: rgb(172, 172, 172);
+}
+
+/* btn */
+
+.btn {
+  display: inline-block;
+  color: white;
+  background-color: rgb(37, 100, 151);
+  text-align: center;
+  height: 70px;
+  line-height: 70px;
+  text-decoration: none;
+}
+
+.btn-read {
+  width: 245px;
+  margin-top: 20px;
+}
+
+.btn-send {
+  width: 120px;
+  margin-top: 15px;
+}
+
+/* gallary */
+
+.gallary {
+  margin-top: 100px;
+}
+
+.gallary01,
+.gallary02,
+.gallary03 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.gallary01 img {
+  width: 19%;
+}
+
+.gallary02 img {
+  width: 32%;
+}
+
+.gallary03 img {
+  width: 24%;
+}
+
+/* Contact */
+
+.contact-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact {
+  width: 175%;
+}
+
+form {
+  margin-top: 15px;
+}
+
+.input {
+  margin-top: 15px;
+  padding: 10px ;
+  border: 1px solid rgb(173, 192, 210);
+  color:  rgb(173, 192, 210);
+  width: 100%;
+}
+
+.input::placeholder {
+  color: rgb(173, 192, 210);
+}
+
+.contact-message {
+  margin: 8% 0 0 30px;
+  color: rgb(172, 172, 172);
+}
+
+/* フッター */
+footer {
+  width: 88%;
+  margin: 100px 50px 35px 75px;
+  color: rgb(172, 172, 172);
+}
+
+footer p,
+footer a {
+  display: inline-block;
+}
+
+.contact-message1 {
+  line-height: 2em;
+}
+
+.contact-message2 {
+  margin-top: 30px;
+  line-height: 1.5em;
+}
