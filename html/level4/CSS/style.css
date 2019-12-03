@@ -1,0 +1,539 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow: auto;
+  }
+
+body {
+  width: 1440px;
+  height: 100%;  /* 仮のheight */
+  overflow: hidden; /*はみ出た部分をどうするか*/
+  font-family: 'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic'
+}
+
+/* wrapper共通のmargin */
+.wrapper {
+  margin: 0 130px;
+}
+
+/* header */
+
+header .top-wrapper {
+  color: white;
+  position: relative;
+}
+
+header .top-img {
+  background-image: url(/Users/Junpei/desktop/codelab_front_basic/html/level4/images/slider_img.jpg);
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+}
+  /* ヘッダーのコンテンツ */
+header .top-wrapper .header-contents {
+  display: flex;
+  justify-content: space-between;
+  /* margin: 0 130px; */
+}
+
+
+  /* ナビゲーション */
+.main-navi {
+  background-color: rgb(232, 132, 241);
+  height: 315px;
+  width: 345px;
+}
+
+.main-navi ul {
+  padding: 60px;
+  line-height: 1.5em;
+  font-size: 1.3em;
+}
+
+.main-navi li a {
+  text-decoration: none;
+  color: white;
+}
+
+  /* ヘッダー見出し */
+header .top-wrapper .header-contents h1 {
+  font-size: 3em;
+  font-family: ;
+  margin-top: 20px;
+}
+
+  /* .top-wrapperのテキスト */
+header .top-wrapper .top-message {
+  /* margin: 0 130px; */
+  position: relative;
+  top: -200px;
+}
+
+header .top-wrapper .top-message h2 {
+  font-size: 5em;
+  padding: 60px 0 0 110px;
+}
+
+header .top-wrapper .top-message p {
+  font-size: 0.9em;
+  padding: 35px 0 0 110px;
+}
+
+/* main */
+
+  /* 背景色 */
+main .main-bg {
+  background-color: rgb(248, 248, 248);
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+  /* .message-wrapper */
+.message-wrapper {
+  background-color: white;
+  height: 480px;
+  width: 900px;
+  position: absolute;
+  top: -130px;
+}
+
+/* .message-wrapperの画像について */
+main .message-wrapper img {
+  object-fit: cover;
+  position: absolute;
+}
+
+.about-img {
+  top: -130px;
+  left: 37px;
+}
+
+.yoga-img {
+  left: 900px;
+  top: 35px;
+}
+
+  /* img-sideのテキストについて */
+.img-side {
+  margin: 30px 15px 0 auto;
+  width: 25%;
+  line-height: 2.5em;
+  position: relative;
+}
+
+.img-side .img-side-title {
+  font-size: 2em;
+  padding-right: 10px;
+}
+.img-side .img-side-message {
+  font-size: 0.9em;
+  color: gray;
+}
+
+.img-side p span {
+  display: inline-block;
+  font-size: 1.2em;
+  position: absolute;
+  top: 5px;
+  left: 90px;
+}
+
+.img-side a {
+  text-decoration: none;
+  color: rgb(250, 85, 242)
+}
+
+  /* messageのh3とテキストについて */
+.message {
+  margin: 130px 35px 0 35px;
+}
+
+.message h3 {
+  font-size: 2.2em;
+  color: rgb(94, 94, 94);
+}
+
+.message p {
+  margin-top: 15px;
+  font-size: 0.9em;
+  letter-spacing: 0.05em;
+  color: gray;
+}
+
+  /* btnについて */
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: rgb(232, 132, 241);
+  box-shadow: 0 5px rgb(255, 48, 245);
+}
+
+/* コースの部分 */
+.cource-bg {
+  background-image: url(/Users/Junpei/desktop/codelab_front_basic/html/level4/images/feature_bg.png);
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  position: relative;
+  top: -100px;
+}
+
+.cource-header {
+  padding-top: 135px;
+  text-align: center;
+  color: white;
+}
+
+.cource-header h3 {
+  font-size: 2em;
+}
+
+.cource-header p {
+  font-size: 1em;
+  margin-top: 20px;
+}
+
+  /* item-wrapper */
+.item-wrapper {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  padding-top: 135px;
+}
+
+  /* itemコンテンツ */
+.item-wrapper .item {
+  width: 30%;
+  text-align: center;
+}
+
+.item-wrapper .item .fas {
+  font-size: 100px;
+}
+
+.item-wrapper .item h4 {
+  font-size: 1.5em;
+  margin-top: 15px;
+}
+
+.item-wrapper .item .item-text {
+  font-size: 0.9em;
+  margin-top: 10px;
+  line-height: 1.4em;
+}
+
+.item-wrapper .item .btn {
+  margin-top: 25px;
+}
+
+/* スカルプチャープログラムの部分 */
+.program-wrapper h3 {
+  text-align: center;
+  font-size: 2.5em;
+}
+
+.program-wrapper .program-contents {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 55px;
+}
+
+.program-wrapper .program-contents .program-item {
+  width: 32%;
+}
+
+.program-wrapper .program-contents .program-item img {
+  width: 100%;
+}
+
+.program-wrapper .program-contents .program-item .program-text {
+  position: relative;
+  text-align: center;
+  top: -25px;
+  background-color: rgb(204, 97, 198);
+  color: white;
+  width: 80%;
+  margin: 0 auto 100px;
+  padding: 15px;
+}
+
+.program-wrapper .program-contents .program-item .program-text p {
+  margin-top: 5px;
+  font-size: 0.75em;
+}
+
+/* coachの部分 */
+main .coaches-bg {
+  background-image: url(/Users/Junpei/desktop/codelab_front_basic/html/level4/images/coaches_bg.jpg);
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+}
+
+  /* coaches circle-item のpositionについて */
+main .coaches-bg .coaches-wrapper {
+  position: absolute;
+  width: 100%;
+}
+
+main .coaches-bg .coaches-wrapper ul li {
+  position: absolute;
+}
+
+
+
+  /* circleのanimation(bound)について */
+.bound:hover {
+  animation-name: bound;
+  animation-duration: 0.35s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+
+@keyframes bound {
+  0% {transform:translate(0, 0);}
+  50% {transform:translate(0, 5px);}
+  100% {transform:translate(0, 0);}
+}
+
+
+
+
+  /* circleの背景色について */
+main .coaches-bg .coaches-wrapper ul .circle-bg p {
+  background: linear-gradient(left ,#8165a6, #d83f87) repeat scroll 0 0;
+  background: -webkit-linear-gradient(left ,#8165a6, #d83f87) repeat scroll 0 0;
+  background: -moz-linear-gradient(left ,#8165a6, #d83f87) repeat scroll 0 0;
+  background: -o-linear-gradient(left ,#8165a6, #d83f87) repeat scroll 0 0;
+  font-size: 30px;
+  border-radius: 50%;
+  text-align: center;
+  color: white;
+}
+
+  /* yoga-circle1について */
+.yoga-circle1 {
+  top: 95px;
+  left: 15px;
+}
+
+.yoga-circle1 p {
+  height: 120px;
+  width: 120px;
+  line-height: 120px;
+}
+
+  /* .yoga-circle2について */
+.yoga-circle2 {
+  top: 155px;
+  left: 970px;
+}
+
+.yoga-circle2 p {
+  height: 110px;
+  width: 110px;
+  line-height: 110px;
+}
+
+  /* .gym-circleについて */
+.gym-circle {
+  top: 350px;
+  left: 615px;
+}
+
+.gym-circle p {
+  height: 180px;
+  width: 180px;
+  line-height: 180px;
+}
+
+  /* coach-circle について */
+.coach1 {
+  top: 95px;
+  left: 155px;
+}
+
+.coach2 {
+  top: 65px;
+  left: 375px;
+}
+
+.coach3 {
+  top: 165px;
+  left: 665px;
+}
+
+.coach4 {
+  top: 170px;
+  left: 775px;
+}
+
+.coach5 {
+  top: 240px;
+  left: 50px;
+}
+
+.coach6 {
+  top: 290px;
+  left: 205px;
+}
+
+.coach7 {
+  top: 360px;
+  left: 420px;
+}
+
+.coach8 {
+  top: 400px;
+  left: 815px;
+}
+
+.coach9 {
+  top: 290px;
+  left: 955px;
+}
+
+.coach10 {
+  top: 400px;
+  left: 15px;
+}
+
+/* footerについて */
+.footer .footer-bg {
+  background: linear-gradient(left ,#8165a6, #d83f87) repeat scroll 0 0;
+  background: -webkit-linear-gradient(left ,#8165a6, #d83f87) repeat scroll 0 0;
+  background: -moz-linear-gradient(left ,#8165a6, #d83f87) repeat scroll 0 0;
+  background: -o-linear-gradient(left ,#8165a6, #d83f87) repeat scroll 0 0;
+}
+
+.footer .footer-wrapper {
+  display: flex;
+}
+
+  /* .footer-left-countainerについて */
+.footer-wrapper .footer-left-countainer {
+  background-color: white;
+  height: 450px;
+  width: 720px;
+  margin-left: -130px;
+  padding-left: 130px;
+}
+
+.footer-wrapper .footer-left-countainer .footer-text {
+  margin: 60px 20px 0 auto;
+  width: 60%;
+}
+
+.footer-text h3 {
+  font-size: 2em;
+}
+
+.footer-text p {
+  margin-top: 30px;
+  color: gray;
+}
+
+.footer-left-countainer img {
+  position: relative;
+  top: -90px;
+  object-fit: cover;
+}
+
+  /* footer-right-countainerについて */
+.footer-wrapper  .footer-right-countainer {
+display: flex;
+margin: 50px 0 0 40px;
+color: white;
+}
+
+  /* footer-links */
+.footer-right-countainer .footer-links li {
+  margin-top: 15px;
+  font-size: 0.9em;
+}
+
+.footer-right-countainer .footer-links {
+  margin-right: 180px;
+}
+
+.footer-right-countainer .footer-links h4 {
+  margin-bottom: 40px;
+  font-size: 1.5em;
+}
+
+  /* footer-contact */
+.footer-right-countainer .footer-contact h4 {
+  margin-bottom: 30px;
+  font-size: 1.5em;
+}
+
+.footer-right-countainer .footer-contact li {
+  margin-top: 15px;
+  font-size: 0.9em;
+}
+
+.footer-right-countainer .footer-contact li i {
+  padding-right: 6px;
+}
+
+  /* footer-bottom */
+.footer-bottom {
+  text-align: center;
+  padding: 100px 0 50px 0;
+  color: rgb(70, 70, 70);
+}
+
+.footer-bottom span {
+  font-weight: bold;
+  color: white;
+}
+
+
+
+
+/* 画面右下のトップへ戻るについて
+
+#page_top{
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  background: rgb(70, 70, 70);
+  opacity: 0.6;
+  border-radius: 50%;
+  margin: 0 10px 20px 0;
+}
+#page_top a{
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 30px;
+  text-decoration: none;
+}
+#page_top a::before{
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f106';
+  font-size: 25px;
+  color: #fff;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: -5px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+} */
