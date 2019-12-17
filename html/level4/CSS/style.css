@@ -10,7 +10,6 @@ html {
 
 body {
   width: 1440px;
-  height: 100%;  /* 仮のheight */
   overflow: hidden; /*はみ出た部分をどうするか*/
   font-family: 'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic'
 }
@@ -28,7 +27,7 @@ header .top-wrapper {
 }
 
 header .top-img {
-  background-image: url(/Users/Junpei/desktop/codelab_front_basic/html/level4/images/slider_img.jpg);
+  background-image: url(../images/slider_img.jpg);
   height: 100vh;
   width: 100%;
   background-size: cover;
@@ -51,6 +50,7 @@ header .top-wrapper .header-contents {
 .main-navi ul {
   padding: 60px;
   line-height: 1.5em;
+
   font-size: 1.3em;
 }
 
@@ -178,7 +178,7 @@ main .message-wrapper img {
 
 /* コースの部分 */
 .cource-bg {
-  background-image: url(/Users/Junpei/desktop/codelab_front_basic/html/level4/images/feature_bg.png);
+  background-image: url(../images/feature_bg.png);
   height: 100vh;
   width: 100%;
   background-size: cover;
@@ -273,7 +273,7 @@ main .message-wrapper img {
 
 /* coachの部分 */
 main .coaches-bg {
-  background-image: url(/Users/Junpei/desktop/codelab_front_basic/html/level4/images/coaches_bg.jpg);
+  background-image: url(../images/coaches_bg.jpg);
   height: 100vh;
   width: 100%;
   background-size: cover;
