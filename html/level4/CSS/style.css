@@ -109,7 +109,7 @@ main .message-wrapper img {
 }
 
 .about-img {
-  top: -130px;
+  top: -90px;
   left: 37px;
 }
 
@@ -150,7 +150,7 @@ main .message-wrapper img {
 
   /* messageのh3とテキストについて */
 .message {
-  margin: 130px 35px 0 35px;
+  margin: 145px 35px 0 35px;
 }
 
 .message h3 {
@@ -179,7 +179,7 @@ main .message-wrapper img {
 /* コースの部分 */
 .cource-bg {
   background-image: url(../images/feature_bg.png);
-  height: 100vh;
+  height: 700px;
   width: 100%;
   background-size: cover;
   position: relative;
@@ -274,7 +274,7 @@ main .message-wrapper img {
 /* coachの部分 */
 main .coaches-bg {
   background-image: url(../images/coaches_bg.jpg);
-  height: 100vh;
+  height: 650px;
   width: 100%;
   background-size: cover;
 }
@@ -282,7 +282,7 @@ main .coaches-bg {
   /* coaches circle-item のpositionについて */
 main .coaches-bg .coaches-wrapper {
   position: absolute;
-  width: 100%;
+  /* widthを100%にすると余白できてしまうからNG */
 }
 
 main .coaches-bg .coaches-wrapper ul li {
