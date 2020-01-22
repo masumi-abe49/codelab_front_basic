@@ -606,6 +606,7 @@ main .image-wrapper04 {
   border-right: none;
   border-left: none;
   color: #989898;
+  padding-left: 1rem;
 }
 
 .info-wrapper .contact input {
@@ -622,7 +623,7 @@ main .image-wrapper04 {
   background-color: #E4E4E4;
   width: 100%;
   margin-top: 3rem;
-  resize: none;
+  /* resize: none; */
 }
 
 .info-wrapper .contact .contact-btn {
@@ -658,36 +659,263 @@ footer p:last-child {
 }
 
 footer a {
-  color: orange;
+  color: #a25f1a;;
 }
 
-/****************** メディアクエリ　375px以下の時 ＜レビュー後、記述予定＞ ******************/
+/****************** メディアクエリ　375px以下の時  ******************/
 
 @media screen and (max-width: 375px) {
-/* .top-wrapper */
-　.top-wrapper {
+/* 共通 */
+  .top-wrapper h1::after,
+  .wrapper h2::after {
+    width: 10rem;
+  }
+
+  .wrapper h2 {
+    padding-top: 3.5rem;
+  }
+
+  .wrapper p,
+  .whychoose-wrapper .whychoose-text,
+  .getin-wrapper .getin-text {
+    font-size: 1.3rem;
+    padding: 2.5rem 2rem;
+    line-height: 2.3rem;
+    letter-spacing: 0.1rem;
+    font-weight: 200;
+  }
+/* .top-wrapper  */
+  .top-wrapper {
     background-size: cover;
-    height: 400px
+    background-position: center;
+    padding-top: 0%;
+    height: 400px;
   }
 
   .top-wrapper h1 {
     font-size: 2rem;
     font-weight: bold;
     letter-spacing: 0.4rem;
+    padding-top: 10rem;
     padding-bottom: 1rem;
+  }
+
+  .top-wrapper h1::after {
+    bottom: -1rem;
   }
 
   .top-wrapper p {
     font-size: 1.3rem;
-    padding-top: 2rem;
+    padding: 2.5rem 0 0;
     line-height: 2.3rem;
     letter-spacing: 0.1rem;
     font-weight: 200;
   }
 
-  .top-wrapper-bg i {
-    font-size: 2.5rem;
-    top: 3%;
-    left: 8%;
+  .top-wrapper .mouse-icon {
+    margin-top: 5rem;
+  }
+
+  .top-wrapper i {
+    font-size: 3rem;
+    top: 4%;
+    left: 9%;
+  }
+
+/* .introduction-wrapper */
+  .introduction-wrapper p {
+    padding: 3rem;
+  }
+
+/* image-wrapper 共通 */
+  .image-wrapper {
+    height: 25rem;
+    background-position: center;
+  }
+
+  .image-wrapper p {
+    font-size: 1.3rem;
+    padding: 1rem 3rem;
+    margin-top: 10rem;
+  }
+
+/* image-wrapper01 */
+  .image-wrapper01 {
+   background-position: center;
+  }
+
+
+/* contents-wrapper */
+  .contents-wrapper ul {
+    flex-wrap: wrap;
+  }
+
+  .contents-wrapper nav ul {
+    padding: 2rem 0 1rem;
+  }
+  .contents-wrapper nav ul li {
+    width: 27%;
+    padding-top: 2rem;
+  }
+
+  .contents-wrapper nav ul li a {
+    padding-right: 0%;
+  }
+
+  .contents-wrapper .portfolios-list {
+    padding: 1.7rem;
+  }
+
+  .contents-wrapper .portfolios-list .portfolio {
+    width: 49%;
+    margin-bottom: 1.7rem;
+  }
+
+  .contents-wrapper .contents-link {
+    font-size: 1.5rem;
+    padding: 1.5rem 8.5rem;
+  }
+
+/* logo-wrapper */
+
+  .logo-wrapper {
+    padding-bottom: 3rem;
+  }
+
+  .logo-wrapper ul {
+    flex-wrap: wrap;
+  }
+
+  .logo-wrapper ul li  {
+    width: 100%;
+  }
+
+  .logo-wrapper ul li a {
+    padding: 0 0 2rem;
+  }
+
+/* about-wrapper */
+  .about-wrapper {
+    margin-bottom: 2.5rem;
+  }
+  .about-wrapper p {
+    padding: 3rem;
+  }
+
+  .about-items {
+    flex-wrap: wrap;
+    margin: 2.5rem 1.5rem;
+  }
+
+  .about-items img, .about-items .about-text-item {
+    width: 100%;
+    padding-bottom: 1rem;
+  }
+
+  .about-text-item {
+    height: 37.5rem;
+  }
+
+  .about-text-item br {
+    display: none;
+  }
+
+  .about-items .about-text-item .about-link {
+    padding: 1rem 11rem;
+    font-size: 1.5rem;
+  }
+
+/* image-wrapper03 */
+  .image-wrapper03 {
+    height: 30rem;
+  }
+
+  .image-wrapper03 img {
+    /* 仮の位置 */
+    top: 35%;
+    left: 42%;
+  }
+
+/* device-icons */
+  .device-icons {
+    margin: 0;
+  }
+
+  .device-icons .device {
+    width: 100%;
+    flex: none;
+  }
+
+  .device-icons .device .icon-text {
+    padding: 0 3.5rem;
+    letter-spacing: 0;
+    line-height: 2rem;
+    font-size: 1.4rem;
+  }
+
+/* info-wrapper */
+  .info-wrapper {
+    display: inline-block;
+  }
+
+  .info-wrapper .location,
+  .info-wrapper .contact {
+    width: 100%;
+    padding: 4.5rem 0 3.5rem;
+    font-size: 2rem;
+    font-weight: 200;
+    line-height: 2rem;
+  }
+
+  .info-wrapper .contact {
+    padding: 0rem 1.5rem 2.5rem;
+  }
+
+  .location .logo-icon {
+    padding-top: 3rem;
+  }
+
+  .logo-icon li {
+    padding-right: 3rem;
+  }
+
+  /* contact */
+  .info-wrapper .contact input,
+  .info-wrapper .contact input:first-child {
+    margin: 0;
+    width: 100%;
+    padding: 3.5rem 0 1rem 1.5rem;
+  }
+
+  .info-wrapper .contact textarea {
+    margin-top: 8rem;
+  }
+
+  .info-wrapper .contact a {
+    font-size: 2rem;
+    margin-top: 3.5rem;
+  }
+
+/* footer */
+  footer {
+    height: 100%;
+
+  }
+
+  .footer-logo img {
+    width: 100%;
+    margin-top: 3rem;
+    padding: 0 1.5rem;
+  }
+
+  footer p {
+    padding: 1.5rem 4.5rem 0;
+    font-size: 1.5rem;
+    line-height: 3rem;
+  }
+
+  footer p:last-child {
+    padding-top: 0;
+    padding-bottom: 3.5rem;
   }
 }
