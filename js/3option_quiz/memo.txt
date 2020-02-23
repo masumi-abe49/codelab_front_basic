@@ -1,0 +1,87 @@
+３択クイズについて
+
+【3択クイズ仕様】
+
+・「解答!!」ボタンを押した時、モーダルウィンドウが表示されること(opacityプロパティを使う)。またモーダルはposition:fixedを使い、画面の中央に表示すること
+
+　→.mask.hiddenが解答ボタンを押した時のグレー背景になりそう。
+
+・「解答!!」ボタンを押した時、モーダルに正答率が正しく表示されること。また正答率は小数点を切り捨てること
+
+・モーダルの「閉じる」ボタンまたはモーダルの外側をクリックした時、モーダルが閉じること
+
+・クイズの結果を繰り返し行っても、常に正答率が正しく表示されること
+
+【正解】
+問題1：アメリカ合衆国
+<label><input type="radio" name="question1" value="2"><span>アメリカ合衆国</span></label>
+
+問題2：鳥取県
+<label><input type="radio" name="question2" value="3"><span>鳥取県</span></label>
+
+問題3：長野県
+<label><input type="radio" name="question3" value="2"><span>長野県</span></label><br>
+
+**********
+
+・各問題の回答が選ばれる　（ラジオボタンが選択される　.checked　で取得  ??）
+
+
+
+　→選択されている要素の value を取得 .checked ?
+
+
+
+
+　→回答が正解かどうか比較する　if
+
+
+
+　→選択されている value が正解なら、正解数を格納する＜変数＞に1を追加していく。 ansCount++　　？？
+
+
+　→3問とも同じ操作を繰り返す。　for ??
+
+
+
+
+・＜解答ボタン＞が押されたら、モーダルウィンドウ（下記コード）　が表示される。
+
+　→clickによって、modalクラスにshowクラスを追加されるようにし、maskクラスのhiddenクラスを削除されるようにする。（display: none;　を　block　にして表示させるかも）
+
+＜CSSの　@keyframes　で表示、非表示のアニメーション部分が書かれている＞
+
+●参考：https://qiita.com/7968/items/1d999354e00db53bcbd8●
+@keyframes で指定したアニメーションは、どこに適用されるの？
+アニメーション開始から終了までの時間はどこで指定するの？
+
+これらは、animation プロパティで指定します。
+　→CSS 111行目＜animation: show 1s linear 0s;＞
+※fromはアニメーション開始時、toは終了時
+
+@keyframes show{
+  from{　　
+      opacity: 0;
+  }
+  to{
+      opacity: 1;
+  }
+}
+
+@keyframes では開始から終了までのアニメーションを指定しました。
+animation プロパティでは、どのアニメーションを適用するのか、適用したアニメーションはいつ開始されるのか、開始されてから終了するまでの時間、アニメーションの繰り返し回数などを指定することができます。
+
+<div class="answer" id="answer">解答!!</div>
+
+【モーダルウィンドウ】
+<div class="modal" id="modal">
+      <div class="result" id="result">?</div>
+      <div class="close" id="close">閉じる</div>
+    </div>
+
+
+・正答率は、選択されている正解数 / 問題数（今回は3） * 100 だと思う。小数点を切り捨て
+
+　→　Math.floor()　の引数として計算する　？？
+
+
