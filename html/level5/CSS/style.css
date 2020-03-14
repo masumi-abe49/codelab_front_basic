@@ -74,8 +74,32 @@ a {
   font-weight: 200;
 }
 
+/* animation1  */
+.zoomup {
+  animation: zoomup 0.5s 1 linear;
+}
+
+@keyframes zoomup {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  25% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(0.9);
+    opacity: 0.75;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 .top-wrapper i {
-  position: absolute;
+  position: fixed;
   font-size: 1.7rem;
   color: orangered;
   top: 3%;
@@ -106,13 +130,27 @@ a {
 .introduction-wrapper h2::after {
   content: "";
   position: absolute;
-  left: 50%;
+  /* left: 50%; */
   bottom: 0rem;
   display: inline-block;
   width: 6rem;
   height: 1px;
-  transform: translate(-50%);
+  /* transform: translateX(-50%); */
   background-color: darkgray;
+}
+
+/* ※できていない　200308※　introduction-wrapperのアニメーション　擬似要素（下線）のスクロールごのCSS */
+.active::after {
+  /* content: "";
+  position: absolute; */
+  left: 50%;
+  /* bottom: 0rem;
+  display: inline-block;
+  width: 6rem;
+  height: 1px; */
+  transform: translateX(-50%) rotate(180deg);
+  /* background-color: darkgray; */
+  transition: transform 2s;
 }
 
 .introduction-wrapper p {
@@ -137,6 +175,34 @@ a {
 
 .image-wrapper01 {
   background-image: url(../img/lepy.jpg);
+}
+
+/* jQuery　縦回転　.image-wrapper01 p と　image-wrapper04 p */
+.rotate {
+  animation: rotate 2s 1 ease-in-out;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateX(100deg);  /* 中心X軸を基準線に回転する */
+    opacity: 0;
+  }
+  25% {
+    transform: rotateX(-40deg);
+    opacity: 0.25;
+  }
+  50% {
+    transform: rotateX(20deg);
+    opacity: 0.5;
+  }
+  75% {
+    transform: rotateX(-10deg);
+    opacity: 0.75;
+  }
+  100% {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
 }
 
 .image-wrapper02 {
@@ -371,7 +437,19 @@ main .image-wrapper04 {
   padding-bottom: 4rem;
 }
 
-.about-wrapper h2::after {
+.title-about::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0rem;
+  display: inline-block;
+  width: 6rem;
+  height: 1px;
+  transform: translate(-50%);
+  background-color: darkgray;
+}
+/* 点滅させない用 */
+.title-about-show::after {
   content: "";
   position: absolute;
   left: 50%;
@@ -391,6 +469,32 @@ main .image-wrapper04 {
   font-weight: 200;
   padding: 3rem 25rem 3rem;
   color: rgb(169, 169, 169);
+}
+
+/* animation5 ABOUT US  about-wrapper 点滅 クラスflash */
+
+.flash {
+  animation: flash 0.5s 2 linear;
+}
+
+@keyframes flash {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* 下線部の擬似要素のみ点灯させたいためのkeyframes */
+.lighting {
+  animation: lighting 0s 1 linear;
+}
+
+@keyframes lighting {
+  100% {
+    opacity: 1;
+  }
 }
 
   /* about-items */
@@ -478,6 +582,24 @@ main .image-wrapper04 {
   font-weight: 200;
   padding: 3rem 25rem 8rem;
   color: darkgray;
+}
+
+/* WHY CHOOSE US　左右ブルブル　アニメーション用 */
+.buruburu {
+  position: relative; /* right left を機能させるために必要 */
+  animation: buruburu 200ms 4 linear;
+}
+
+@keyframes buruburu {
+  0% {
+    right: 0.5%;
+  }
+  /* 50% {
+    right: 1%;
+  } */
+  100% {
+    left: 0.5%;
+  }
 }
 
   /* deviece-icons */
