@@ -30,6 +30,17 @@ a {
   text-decoration: none;
 }
 
+/* wrapperのtitleの下線部分　擬似要素ではなく<span>で作るとアニメーション実装しやすい */
+
+  /*  animation実装 top-wrapper下線 */
+.border-a {
+  display: block;
+  border-top: 0.1rem solid white;
+  width: 10rem;
+  margin: 1rem auto;
+} 
+
+
 /********* 以下コンテンツ **********/
 
 /* top-wrapper */
@@ -54,7 +65,8 @@ a {
   padding-bottom: 2rem;
 }
 
-.top-wrapper h1::after {
+/* 当初の下線部　別途＜span＞追加でのanimation実装のためコメントアウト 200323 */
+/* .top-wrapper h1::after {
   content: "";
   position: absolute;
   left: 50%;
@@ -64,7 +76,7 @@ a {
   height: 1px;
   transform: translate(-50%);
   background-color: white;
-}
+} */
 
 .top-wrapper p {
   font-size: 1rem;
@@ -75,22 +87,31 @@ a {
 }
 
 /* animation1  */
-.zoomup {
-  animation: zoomup 0.5s 1 linear;
+.top-animation {
+  animation: top-animation 0.5s 1 linear forwards; /* forwardsでanimation終了時の状態を維持 */
 }
 
-@keyframes zoomup {
+@keyframes top-animation {
+  /* フェードインと拡大縮小 */
   0% {
     transform: scale(0.9);
     opacity: 0;
   }
-  25% {
+  20% {
     transform: scale(1);
-    opacity: 0.5;
+    opacity: 0.2;
   }
-  50% {
+  40% {
     transform: scale(0.9);
-    opacity: 0.75;
+    opacity: 0.4;
+  }
+  60% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  80% {
+    transform: scale(0.9);
+    opacity: 0.8;
   }
   100% {
     transform: scale(1);
@@ -127,31 +148,76 @@ a {
   padding-bottom: 4rem;
 }
 
-.introduction-wrapper h2::after {
-  content: "";
-  position: absolute;
-  /* left: 50%; */
-  bottom: 0rem;
-  display: inline-block;
-  width: 6rem;
-  height: 1px;
-  /* transform: translateX(-50%); */
-  background-color: darkgray;
+.border-rotate {
+  display: block;
+  border-top: 0.1rem solid darkgray;
+  width: 10rem;
+  margin: 1rem auto;
+} 
+
+/* INTRO DUCTION h2 pのズームイン */
+
+.zoom {
+  animation: zoom 1s 1 linear;
+  /* opacity: 1; */
 }
 
-/* ※できていない　200308※　introduction-wrapperのアニメーション　擬似要素（下線）のスクロールごのCSS */
-.active::after {
-  /* content: "";
+@keyframes zoom {
+  /* フェードインズームイン */
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+/* INTRO DUCTION 下線部の回転とスライド */
+.slide-rotate {
+  animation: slide-rotate 1s 1 linear;
+  /* opacity: 1; */
+}
+
+@keyframes slide-rotate {
+  0% {
+    transform: translateX(-15rem) rotate(0deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0rem) rotate(180deg);
+    opacity: 1;
+  }
+}
+
+/* 当初の下線部　animation実装のためコメントアウト 200323 */
+/* .introduction-wrapper h2::after {
+  content: "";
   position: absolute; */
-  left: 50%;
+  /* left: 50%; */
   /* bottom: 0rem;
   display: inline-block;
   width: 6rem;
   height: 1px; */
+  /* transform: translateX(-50%); */
+  /* background-color: darkgray;
+} */
+
+/* ※不要　2003023※　introduction-wrapperのアニメーション　擬似要素（下線）のスクロールごのCSS */
+/* .active::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0rem;
+  display: inline-block;
+  width: 6rem;
+  height: 1px;
   transform: translateX(-50%) rotate(180deg);
-  /* background-color: darkgray; */
+  background-color: darkgray;
   transition: transform 2s;
-}
+} */
 
 .introduction-wrapper p {
   font-size: 1.1rem;
@@ -179,7 +245,7 @@ a {
 
 /* jQuery　縦回転　.image-wrapper01 p と　image-wrapper04 p */
 .rotate {
-  animation: rotate 2s 1 ease-in-out;
+  animation: rotate 1.5s 1 linear;
 }
 
 @keyframes rotate {
@@ -187,15 +253,15 @@ a {
     transform: rotateX(100deg);  /* 中心X軸を基準線に回転する */
     opacity: 0;
   }
-  25% {
-    transform: rotateX(-40deg);
+  40% {
+    transform: rotateX(-30deg);
     opacity: 0.25;
   }
-  50% {
-    transform: rotateX(20deg);
+  60% {
+    transform: rotateX(15deg);
     opacity: 0.5;
   }
-  75% {
+  80% {
     transform: rotateX(-10deg);
     opacity: 0.75;
   }
@@ -264,7 +330,7 @@ main .image-wrapper04 {
   left: 50%;
   bottom: 0rem;
   display: inline-block;
-  width: 6rem;
+  width: 10rem;
   height: 1px;
   transform: translate(-50%);
   background-color: darkgray;
@@ -392,7 +458,17 @@ main .image-wrapper04 {
   color: black;
 }
 
-.logo-wrapper h2::after {
+
+/* animation実装に関する wrapper(OUR CLIENTS,ABOUT US)下線（<h2>に関するアニメーションの影響を受けないようにするため擬似要素からの変更） */
+.border-b {
+  display: block;
+  border-top: 0.1rem solid darkgray;
+  width: 10rem;
+  margin: 1rem auto;
+} 
+
+/* 当初の下線部　別途＜span＞追加でのanimation実装のためコメントアウト 200323 */
+/* .logo-wrapper h2::after {
   content: "";
   position: absolute;
   left: 50%;
@@ -402,7 +478,7 @@ main .image-wrapper04 {
   height: 2px;
   transform: translate(-50%);
   background-color: darkgray;
-}
+} */
 
 .logo-wrapper ul {
   display: flex;
@@ -437,7 +513,9 @@ main .image-wrapper04 {
   padding-bottom: 4rem;
 }
 
-.title-about::after {
+
+/* 当初の下線部　別途＜span＞追加でのanimation実装のためコメントアウト 200323 */
+/* .title-about::after {
   content: "";
   position: absolute;
   left: 50%;
@@ -447,9 +525,9 @@ main .image-wrapper04 {
   height: 1px;
   transform: translate(-50%);
   background-color: darkgray;
-}
+} */
 /* 点滅させない用 */
-.title-about-show::after {
+/* .title-about-show::after {
   content: "";
   position: absolute;
   left: 50%;
@@ -459,7 +537,7 @@ main .image-wrapper04 {
   height: 1px;
   transform: translate(-50%);
   background-color: darkgray;
-}
+} */
 
 .about-wrapper p {
   font-size: 1.1rem;
@@ -486,8 +564,8 @@ main .image-wrapper04 {
   }
 }
 
-/* 下線部の擬似要素のみ点灯させたいためのkeyframes */
-.lighting {
+/* ※<span>にてアニメーション実装のため、不要。　下線部の擬似要素のみ点灯させたいためのkeyframes */
+/* .lighting {
   animation: lighting 0s 1 linear;
 }
 
@@ -495,7 +573,7 @@ main .image-wrapper04 {
   100% {
     opacity: 1;
   }
-}
+} */
 
   /* about-items */
 
@@ -562,7 +640,15 @@ main .image-wrapper04 {
   padding-bottom: 4rem;
 }
 
-.whychoose-wrapper h2::after {
+.border-buruburu {
+  display: block;
+  border-top: 0.1rem solid darkgray;
+  width: 10rem;
+  margin: 1rem auto;
+} 
+
+/* ※<span>にてアニメーション実装のため、不要。 下線部 */
+/* .whychoose-wrapper h2::after {
   content: "";
   position: absolute;
   left: 50%;
@@ -572,7 +658,7 @@ main .image-wrapper04 {
   height: 1px;
   transform: translate(-50%);
   background-color: darkgray;
-}
+} */
 
 .whychoose-wrapper .whychoose-text {
   font-size: 1.1rem;
@@ -710,7 +796,15 @@ main .image-wrapper04 {
   padding-bottom: 4rem;
 }
 
-.getin-wrapper h2::after {
+.border-zoom {
+  display: block;
+  border-top: 0.1rem solid darkgray;
+  width: 10rem;
+  margin: 1rem auto;
+} 
+
+/* <span>で作成のため、不要　200323 */
+/* .getin-wrapper h2::after {
   content: "";
   position: absolute;
   left: 50%;
@@ -720,7 +814,7 @@ main .image-wrapper04 {
   height: 1px;
   transform: translate(-50%);
   background-color: darkgray;
-}
+} */
 
 .getin-wrapper .getin-text {
   font-size: 1.1rem;
